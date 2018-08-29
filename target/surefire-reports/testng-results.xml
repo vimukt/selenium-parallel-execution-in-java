@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="153903" started-at="2018-08-29T05:42:27Z" finished-at="2018-08-29T05:45:01Z">
+    <groups>
+    </groups>
+    <test name="checkout-firefox" duration-ms="102823" started-at="2018-08-29T05:42:27Z" finished-at="2018-08-29T05:44:10Z">
+      <class name="com.ebay.tests.CheckoutTest">
+        <test-method status="PASS" signature="searchValidPerson(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.ebay.tests.CheckoutTest@3a5ed7a6]" name="searchValidPerson" duration-ms="102806" started-at="2018-08-29T05:42:27Z" finished-at="2018-08-29T05:44:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[qa.vimukt@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Fcuk0007]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchValidPerson -->
+      </class> <!-- com.ebay.tests.CheckoutTest -->
+    </test> <!-- checkout-firefox -->
+    <test name="checkout-chrome" duration-ms="153903" started-at="2018-08-29T05:42:27Z" finished-at="2018-08-29T05:45:01Z">
+      <class name="com.ebay.tests.CheckoutTest">
+        <test-method status="PASS" signature="searchValidPerson(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.ebay.tests.CheckoutTest@2ac273d3]" name="searchValidPerson" duration-ms="153887" started-at="2018-08-29T05:42:27Z" finished-at="2018-08-29T05:45:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[virgil.jenkins@rediffmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Fcuk0007]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchValidPerson -->
+      </class> <!-- com.ebay.tests.CheckoutTest -->
+    </test> <!-- checkout-chrome -->
+  </suite> <!-- Suite -->
+</testng-results>

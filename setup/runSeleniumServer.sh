@@ -1,0 +1,1 @@
+java -jar -Dwebdriver.gecko.driver=../src/main/resources/geckodriver -Dwebdriver.chrome.driver=../src/main/resources/chromedriver selenium-server-standalone-3.14.0.jar

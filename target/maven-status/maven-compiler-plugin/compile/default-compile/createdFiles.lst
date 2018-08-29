@@ -1,0 +1,5 @@
+com/ebay/utils/Utils.class
+com/ebay/pageobjects/LoginPage.class
+com/ebay/pageobjects/CheckoutPage.class
+com/ebay/pageobjects/BasePage.class
+com/ebay/pageobjects/HomePage.class
