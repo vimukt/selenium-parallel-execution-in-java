@@ -17,7 +17,7 @@ public class CheckoutTest {
 
 	@Test
 	@Parameters({ "browser", "userName", "password" })
-	public void searchValidPerson(@Optional("chrome") String browser, String userName, String password)
+	public void checkoutItems(@Optional("chrome") String browser, String userName, String password)
 			throws Exception {
 
 		WebDriver driver = Utils.getDriver(browser);
