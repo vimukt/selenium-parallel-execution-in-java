@@ -2,6 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests" thread-count="2" >
 
+<!--  
+<test name="nexus 5">
+        <parameter name="browser" value="nexus 5"/>
+        <parameter name="userName" value="virgil.jenkins@rediffmail.com"/>
+        <parameter name="password" value="Fcuk0007"/>
+        
+        <classes>
+            <class name="com.ebay.tests.CheckoutTest"/>
+        </classes>
+    </test>
+    
+-->    
 
     <test name="checkout-chrome">
         <parameter name="browser" value="chrome"/>
@@ -12,6 +24,9 @@
             <class name="com.ebay.tests.CheckoutTest"/>
         </classes>
     </test>
+    
+    
+    
 
 
     <test name="checkout-firefox">
@@ -22,4 +37,6 @@
             <class name="com.ebay.tests.CheckoutTest"/>
         </classes>
     </test>
+    
+   
    </suite>

@@ -13,6 +13,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 public class Utils {
@@ -35,18 +37,18 @@ public class Utils {
 
     /**
      * Return a DesiredCapability for a given browser
-     * @param browser the browser name. Allowed browsers are: chrome, firefox
+     * @param browser the browser name. Allowed browsers are: chrome, firefox & Simulate Mobile Devices with Device Mode (chrome).
      * @return a DesiredCapability
      * @throws Exception if the browser is not mapped
      */
     private static DesiredCapabilities returnCapability(String browser) throws Exception {
         DesiredCapabilities desiredCapabilities;
-
+        Map<String, Object> chromeOptions ;
         String path = "" ;
         switch (browser.toLowerCase()) {
             case "chrome":
             	path = "src/main/resources/chromedriver";
-            	//System.setProperty("webdriver.chrome.driver","./chromedriver"); 
+            	System.setProperty("webdriver.chrome.driver",path); 
                 desiredCapabilities = DesiredCapabilities.chrome();
                 desiredCapabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
                 desiredCapabilities.setCapability(CapabilityType.SUPPORTS_ALERTS, true);
@@ -65,7 +67,121 @@ public class Utils {
                 desiredCapabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
                 break;
 
-      
+            case "nexus 5":
+            	path = "src/main/resources/chromedriver";
+            	System.setProperty("webdriver.chrome.driver",path); 
+            	Map<String, String> nexus5 = new HashMap<String, String>();
+            	nexus5.put("deviceName", "Nexus 5");
+            	chromeOptions = new HashMap<String, Object>();
+            	chromeOptions.put("mobileEmulation", nexus5);
+            	desiredCapabilities = DesiredCapabilities.chrome();
+            	desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+                break;
+            	
+            case "nexus 6":
+            	path = "src/main/resources/chromedriver";
+            	System.setProperty("webdriver.chrome.driver",path); 
+            	Map<String, String> nexus6 = new HashMap<String, String>();
+            	nexus6.put("deviceName", "Google Nexus 6");
+            	chromeOptions = new HashMap<String, Object>();
+            	chromeOptions.put("mobileEmulation", nexus6);
+            	desiredCapabilities = DesiredCapabilities.chrome();
+            	desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+            	break;
+            	
+            case "pixel 2":
+            	path = "src/main/resources/chromedriver";
+            	System.setProperty("webdriver.chrome.driver",path); 
+            	Map<String, String> pixel2 = new HashMap<String, String>();
+            	pixel2.put("deviceName", "Pixel 2");
+            	chromeOptions = new HashMap<String, Object>();
+            	chromeOptions.put("mobileEmulation", pixel2);
+            	desiredCapabilities = DesiredCapabilities.chrome();
+            	desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+            	break;
+            	
+            case "pixel 2 xl":
+            	path = "src/main/resources/chromedriver";
+            	System.setProperty("webdriver.chrome.driver",path); 
+            	Map<String, String> pixel2xl = new HashMap<String, String>();
+            	pixel2xl.put("deviceName", "Pixel 2 XL");
+            	chromeOptions = new HashMap<String, Object>();
+            	chromeOptions.put("mobileEmulation", pixel2xl);
+            	desiredCapabilities = DesiredCapabilities.chrome();
+            	desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+            	break;
+            	
+            case "iphone 5" : 
+            case "iphone se": 
+            	path = "src/main/resources/chromedriver";
+            	System.setProperty("webdriver.chrome.driver",path); 
+            	Map<String, String> iphone5_se = new HashMap<String, String>();
+            	iphone5_se.put("deviceName", "iPhone 5/SE");
+            	chromeOptions = new HashMap<String, Object>();
+            	chromeOptions.put("mobileEmulation", iphone5_se);
+            	desiredCapabilities = DesiredCapabilities.chrome();
+            	desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+            	break;
+            	
+            case "iphone 6" :
+            case "iphone 7" :
+            case "iphone 8" :	 
+            	path = "src/main/resources/chromedriver";
+            	System.setProperty("webdriver.chrome.driver",path); 
+            	Map<String, String> iphone6_7_8 = new HashMap<String, String>();
+            	iphone6_7_8.put("deviceName", "iPhone 6/7/8");
+            	chromeOptions = new HashMap<String, Object>();
+            	chromeOptions.put("mobileEmulation", iphone6_7_8);
+            	desiredCapabilities = DesiredCapabilities.chrome();
+            	desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+            	break;
+            	
+            case "iphone 6 plus" :
+            case "iphone 7 plus" :
+            case "iphone 8 plus" :	 
+            	path = "src/main/resources/chromedriver";
+            	System.setProperty("webdriver.chrome.driver",path); 
+            	Map<String, String> iphone6_7_8_plus = new HashMap<String, String>();
+            	iphone6_7_8_plus.put("deviceName", "iPhone 6/7/8 Plus");
+            	chromeOptions = new HashMap<String, Object>();
+            	chromeOptions.put("mobileEmulation", iphone6_7_8_plus);
+            	desiredCapabilities = DesiredCapabilities.chrome();
+            	desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);  	
+            	break;
+            	
+            case "iphone x" :	 
+            	path = "src/main/resources/chromedriver";
+            	System.setProperty("webdriver.chrome.driver",path); 
+            	Map<String, String> iphonex = new HashMap<String, String>();
+            	iphonex.put("deviceName", "iPhone X");
+            	chromeOptions = new HashMap<String, Object>();
+            	chromeOptions.put("mobileEmulation", iphonex);
+            	desiredCapabilities = DesiredCapabilities.chrome();
+            	desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);	
+            	break;
+            	
+            case "ipad" :	 
+            	path = "src/main/resources/chromedriver";
+            	System.setProperty("webdriver.chrome.driver",path); 
+            	Map<String, String> ipad = new HashMap<String, String>();
+            	ipad.put("deviceName", "iPad");
+            	chromeOptions = new HashMap<String, Object>();
+            	chromeOptions.put("mobileEmulation", ipad);
+            	desiredCapabilities = DesiredCapabilities.chrome();
+            	desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+            	break;
+            	
+            case "ipad Pro" :	 
+            	path = "src/main/resources/chromedriver";
+            	System.setProperty("webdriver.chrome.driver",path); 
+            	Map<String, String> ipad_pro = new HashMap<String, String>();
+            	ipad_pro.put("deviceName", "iPad Pro");
+            	chromeOptions = new HashMap<String, Object>();
+            	chromeOptions.put("mobileEmulation", ipad_pro);
+            	desiredCapabilities = DesiredCapabilities.chrome();
+            	desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);	
+            	break;
+            	
             default:
                 throw new Exception("Browser not supported or misspelled");
         }

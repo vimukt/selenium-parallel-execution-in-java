@@ -22,6 +22,7 @@ public class CheckoutTest {
 
 		WebDriver driver = Utils.getDriver(browser);
 		BasePage basePage = new BasePage(driver);
+		
 		LoginPage loginPage = new LoginPage(driver);
 		HomePage homePage = new HomePage(driver);
 		CheckoutPage checkoutPage = new CheckoutPage(driver);
