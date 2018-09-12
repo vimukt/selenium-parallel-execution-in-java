@@ -1,9 +1,9 @@
 package com.ebay.tests;
 
-import com.ebay.pageobjects.BasePage;
-import com.ebay.pageobjects.CheckoutPage;
-import com.ebay.pageobjects.HomePage;
-import com.ebay.pageobjects.LoginPage;
+import com.ebay.pageobjects.desktop.BasePage;
+import com.ebay.pageobjects.desktop.CheckoutPage;
+import com.ebay.pageobjects.desktop.HomePage;
+import com.ebay.pageobjects.desktop.LoginPage;
 import com.ebay.utils.Utils;
 
 import org.openqa.selenium.WebDriver;
@@ -22,7 +22,7 @@ public class CheckoutTest {
 
 		WebDriver driver = Utils.getDriver(browser);
 		BasePage basePage = new BasePage(driver);
-		
+	/*	
 		LoginPage loginPage = new LoginPage(driver);
 		HomePage homePage = new HomePage(driver);
 		CheckoutPage checkoutPage = new CheckoutPage(driver);
@@ -43,7 +43,7 @@ public class CheckoutTest {
 		// sign out
 
 		checkoutPage.logout();
-
+*/
 		driver.quit();
 
 	}

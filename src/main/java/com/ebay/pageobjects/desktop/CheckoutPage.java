@@ -1,4 +1,4 @@
-package com.ebay.pageobjects;
+package com.ebay.pageobjects.desktop;
 
 import java.util.concurrent.TimeUnit;
 

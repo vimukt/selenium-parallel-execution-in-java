@@ -1,4 +1,5 @@
-package com.ebay.pageobjects;
+package com.ebay.pageobjects.desktop;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.NoSuchElementException;
@@ -7,24 +8,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import com.ebay.pageobjects.LoginPage;
 
-import com.ebay.utils.Utils;
 
-public class BasePage {
-
+public class HomePage {
 	private WebDriver driver;
-	@FindBy(xpath = "//a[contains(text(),'Sign in')]")
-	private WebElement singinLink;
 
-	public BasePage(WebDriver driver) {
+	@FindBy(id = "gh-ac")
+	private WebElement searchTxt;
+
+	@FindBy(id = "gh-btn")
+	private WebElement searchBtn;
+
+	@FindBy(css = "#qtyTextBox")
+	private WebElement quantityTxt;
+
+	@FindBy(css = "#atcRedesignId_btn")
+	private WebElement addToCartBtn;
+
+	public HomePage(WebDriver driver) {
 		this.driver = driver;
-
-		driver.get(Utils.getValueFromConf("ebay.url"));
-
 		PageFactory.initElements(driver, this);
-
 		@SuppressWarnings("deprecation")
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 		.withTimeout(60, TimeUnit.SECONDS)
@@ -32,8 +35,10 @@ public class BasePage {
 		.ignoring(NoSuchElementException.class);
 	}
 
-	public LoginPage gotoLoginPage() {
-		singinLink.click();
-		return new LoginPage(driver);
+	public CheckoutPage searchFor(String item) {
+		searchTxt.sendKeys(item);
+		 searchBtn.click();
+		return new CheckoutPage(driver);
 	}
+
 }
