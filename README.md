@@ -48,3 +48,6 @@ Running tests using command line( can be used when wish to run the tests in CI/C
 
         1. Go to project folder(which has pom file)
         2. run maven command : mvn test
+
+NOTE:
+added support: Simulate Mobile Devices with Device Mode(Chrome)
