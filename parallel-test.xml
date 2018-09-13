@@ -6,7 +6,7 @@
 <test name="nexus 5">
         <parameter name="browser" value="nexus 5"/>
         <parameter name="userName" value="virgil.jenkins@rediffmail.com"/>
-        <parameter name="password" value="Fcuk0007"/>
+        <parameter name="password" value="Ebay0007"/>
         
         <classes>
             <class name="com.ebay.tests.CheckoutTest"/>
@@ -18,7 +18,7 @@
     <test name="checkout-chrome">
         <parameter name="browser" value="chrome"/>
         <parameter name="userName" value="virgil.jenkins@rediffmail.com"/>
-        <parameter name="password" value="Fcuk0007"/>
+        <parameter name="password" value="Ebay0007"/>
         
         <classes>
             <class name="com.ebay.tests.CheckoutTest"/>
@@ -32,7 +32,7 @@
     <test name="checkout-firefox">
         <parameter name="browser" value="firefox"/>
         <parameter name="userName" value="qa.vimukt@gmail.com"/>
-        <parameter name="password" value="Fcuk0007"/>
+        <parameter name="password" value="Ebay0007"/>
         <classes>
             <class name="com.ebay.tests.CheckoutTest"/>
         </classes>
